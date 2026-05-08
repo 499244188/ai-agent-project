@@ -69,6 +69,23 @@ python examples/day03-agent/agent_v2_loop.py
 - **v2**：for 循环 + messages.append（Agent 核心秘密）
 - **v3**：RAG 变成 Agent 的一个工具 + 对话记忆
 
+### Day 4：FastAPI 部署
+
+- FastAPI 路由：GET → POST → Pydantic 请求体
+- StreamingResponse：流式输出 LLM 回复
+- 异步：async/await + AsyncOpenAI
+- CORS 中间件 + 异常处理
+- Docker 容器化部署
+
+
+### Day 5：pgvector + 多工具 Agent（生产级 RAG）
+
+- pgvector 向量搜索：PostgreSQL 里的 `<=>` 余弦距离
+- 三个工具：知识库搜索 + 查时间 + 计算器
+- 字典分发替代 if/elif：`tool_functions[name](**args)`
+- 工程化：config → tools/ → agent → main 分层
+
+
 ## Agent 的核心原理
 
 ```
